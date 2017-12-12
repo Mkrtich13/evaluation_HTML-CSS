@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formulaire de satisfaction</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <form id="formulaire" method="post">
+      <label for="prenom">Prénom:</label>
+      <input id="prenom" type="text" name="prenom" size="17" required>
+      <label for="nom">Nom:</label>
+      <input id="nom" type="text" name="nom" size="17" required>
+      <div>
+        <span>Mettez en ligne une photo: </span>
+        <input name="monFichier" type="file">
+      </div>
+
+      <fieldset>
+        <legend>Questions</legend>
+        <span>Que pensez vous de ce test ? (Note entre 0 et 5)*</span>
+        <input type="number" name="note" value="0" min="0" max="5" required>
+        <p>Pensez vous l'avoir réussi ?</p>
+        <div>
+          <input type="radio" id="questionChoix1"
+             name="choix" required>
+          <label for="questionChoix1">Oui</label>
+
+          <input type="radio" id="questionChoix2"
+             name="choix" required>
+          <label for="questionChoix2">Ne se prononce pas</label>
+
+           <input type="radio" id="questionChoix3"
+             name="choix" required>
+           <label for="questionChoix3">Non</label>
+        </div>
+      </fieldset>
+
+      <p>*= Liste des champs obligatoires</p>
+      <div>
+        <button type="submit">Envoyer</button>
+      </div>
+    </form>
+  </body>
+</html>
